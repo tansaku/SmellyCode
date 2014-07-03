@@ -1,4 +1,4 @@
-def do_something(c, d2=[],k5={},f=true)
+def do_something(c, f=true, d2=[],k5={})
   c.sort do |a,b| a[:o]+a[:n] <=> b[:o]+b[:n]
   end.select do |i|
     i[:s] == :c end.select do |i|
