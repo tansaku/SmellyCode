@@ -1,17 +1,17 @@
 require 'kitchen'
 
 describe 'kitchen' do
-  let(:contents) do
+  let(:c) do
     [
-      {name: 'Plate', owner: 'Jon', state: :dirty, location: :sink},
-      {name: 'Cup', owner: 'Jon', state: :clean, location: :cupboard},
-      {name: 'Plate', owner: 'Sam', state: :clean, location: :cupboard},
-      {name: 'Cup', owner: 'Sam', state: :dirty, location: :dishwasher},
+      {n: 'Plate', o: 'Jon', s: :d, l: :s},
+      {n: 'Cup', o: 'Jon', s: :c, l: :c},
+      {n: 'Plate', o: 'Sam', s: :c, l: :c},
+      {n: 'Cup', o: 'Sam', s: :d, l: :d},
     ]
   end
-  it 'should print clean inventory in cupboard by owner' do
+  it 'should do some stuff' do
     expect(self).to receive(:puts).with("Jon's Cup")
     expect(self).to receive(:puts).with("Sam's Plate")
-    print_inventory_by_owner contents
+    do_something c
   end
 end
